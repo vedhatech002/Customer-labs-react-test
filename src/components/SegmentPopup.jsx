@@ -1,15 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import appContext from "../utils/appContext";
 
 const SegmentPopup = () => {
   const [segmentName, setSegmentName] = useState("");
-  console.log(segmentName);
-  return (
+
+  const { isModalOpen, setIsPopupOpen } = useContext(appContext);
+
+  return isModalOpen ? (
     <section className="grid grid-cols-[2fr,1fr] h-screen w-full absolute top-0">
-      <div className="bg-gray-600 bg-opacity-85"></div>
+      <div
+        className="bg-gray-600 bg-opacity-85"
+        onClick={() => {
+          setIsPopupOpen(false);
+        }}
+      ></div>
       <div className="bg-white">
         {/* popup header */}
         <div className="py-4 px-4 bg-blue-500 text-white font-Poppins flex items-center gap-2">
-          <span className="cursor-pointer">
+          <span
+            className="cursor-pointer"
+            onClick={() => {
+              setIsPopupOpen(false);
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -43,6 +56,8 @@ const SegmentPopup = () => {
         </div>
       </div>
     </section>
+  ) : (
+    ""
   );
 };
 
