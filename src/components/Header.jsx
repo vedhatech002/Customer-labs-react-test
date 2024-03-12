@@ -1,9 +1,7 @@
-import React from "react";
-
 const Header = () => {
   return (
     <header className=" font-Poppins bg-blue-500 px-8 py-3 flex items-center justify-between">
-      <h2 className="text-lg text-white">Segemant Page</h2>
+      <h2 className="text-lg text-white font-semibold">Segemant Page</h2>
       <a
         title="source code"
         className=""
