@@ -58,7 +58,7 @@ const SchemasForm = ({ segmentName }) => {
         };
         sendDataTOServer(segmentdata);
         console.log(segmentdata);
-        alert(segment_Name + "segment was saved Successfully 🎉");
+        alert(segment_Name + " segment was saved Successfully 🎉");
         setIsPopupOpen(false);
       } else alert("please add Schema to Save the segmet");
     } else {
