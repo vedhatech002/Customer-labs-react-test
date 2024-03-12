@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import appContext from "../utils/appContext";
+import SchemasForm from "./SchemasForm";
 
 const SegmentPopup = () => {
   const [segmentName, setSegmentName] = useState("");
@@ -7,16 +8,16 @@ const SegmentPopup = () => {
   const { isModalOpen, setIsPopupOpen } = useContext(appContext);
 
   return isModalOpen ? (
-    <section className="grid grid-cols-[2fr,1fr] h-screen w-full absolute top-0">
+    <section className="grid lg:grid-cols-[2fr,1.2fr] sm:grid-cols-[2fr,1.5fr] h-screen w-full absolute top-0 ">
       <div
-        className="bg-gray-600 bg-opacity-85"
+        className="bg-gray-600 bg-opacity-85 sm:block hidden"
         onClick={() => {
           setIsPopupOpen(false);
         }}
       ></div>
       <div className="bg-white">
         {/* popup header */}
-        <div className="py-4 px-4 bg-blue-500 text-white font-Poppins flex items-center gap-2">
+        <div className="py-4 px-8 bg-blue-500 text-white font-Poppins flex items-center gap-2">
           <span
             className="cursor-pointer"
             onClick={() => {
@@ -39,7 +40,7 @@ const SegmentPopup = () => {
           <h1 className="text-lg font-semibold">Add Segment</h1>
         </div>
         {/* popup body */}
-        <div className="px-4 mt-6">
+        <div className="px-8 mt-6">
           <div className="flex flex-col gap-3">
             <label className="font-Poppins text-sm font-medium">
               Enter The Name of The Segment
@@ -52,6 +53,14 @@ const SegmentPopup = () => {
                 setSegmentName(e.target.value);
               }}
             />
+          </div>
+          {/* schema area */}
+          <div className="font-Inter mt-6">
+            <h4 className="font-Poppins text-sm font-medium">
+              To save your segment,you need to add the schemas to buid the
+              quries
+            </h4>
+            <SchemasForm />
           </div>
         </div>
       </div>
