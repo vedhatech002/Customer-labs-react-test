@@ -23,7 +23,6 @@ const SchemasForm = ({ segmentName }) => {
   //To Add new Schema to schemaItems
   const handleaddNewSchema = () => {
     if (newSchemaItem) {
-      console.log(newSchemaItem);
       setSchemaItems((pre) => [...pre, newSchemaItem]);
       setNewSchemaItem("");
     }
@@ -43,7 +42,6 @@ const SchemasForm = ({ segmentName }) => {
 
     const data = Object.fromEntries(formData);
 
-    console.log(data);
     const schema = Object.entries(data).map(([key, value]) => ({
       [key]: value,
     }));

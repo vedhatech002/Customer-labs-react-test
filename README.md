@@ -2,13 +2,13 @@
 
 Level 1 - Frontend Developer Skill Assessment from Customerlabs.Inc
 
-## Assessment
+# Assessment
 
 demo design:
 
 ![demo design](./public/assesmentDemoDesign.png)
 
-Assessment Instruction
+## Assessment Instruction
 
 > Create a simple react application using the screen-1.0
 
@@ -54,3 +54,71 @@ Assessment Instruction
 
 10. To send data to server users https://webhook.site/ website. From this
     website you will get a webhook URL, use that to send data.
+
+# My solution
+
+I have created a segment page application with the above Instruction
+
+### Tools and Technolgy used
+
+- React js
+- TailwindCss
+- vite Bundler
+- webhooksite URL
+- Netlify hosting
+
+### Features
+
+- modal popup
+- dynamic select option
+- simple alert validation
+- responsive design
+
+### Live Link
+
+you can see the live site [here](https://segmant-page-customerlabs-test.netlify.app/).
+
+### Screenshots
+
+- home page :
+
+  ![home page](./public/homepage.png)
+
+- popup open :
+
+  ![popup open](./public/popup.png)
+
+- Add Data to the segment Form:
+
+  ![segmentpopup with data](./public/segmantformwithdata.png)
+
+- Add Schema to segment select box only have an unselected scheama option :
+
+  ![unselected](./public/unselectedoptions.png)
+
+- Selected Scheama also changble with remain options
+
+  ![selectedschemachangable](./public/selectedoptionchangable.png)
+
+- The segment saved
+
+  ![saved segmant](./public/successmsg.png)
+
+- Posted Data with webhooksite url
+
+  ![postedData](./public/postedData.png)
+  you can see the posted data with this [link](https://webhook.site/#!/view/0ef44baf-96aa-42e0-a404-a50328fec69a/dc3c8584-f170-4d75-9526-2c3c7c0a29e7/1)
+
+## To run this project locally
+
+clone this repositery and run below commands.
+
+> npm install
+
+> npm run dev
+
+## Contact Me
+
+- Connect with me on LinkedIn: [Vijayavedhasekaran K](www.linkedin.com/in/vijayavedhasekaran002)
+- Follow me on Instagram: [@vedha_since_2002](https://www.instagram.com/vedha_since_2002/)
+- Email: [vedhatech02@gmail.com](mailto:vedhatech02@gmail.com)
