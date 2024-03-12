@@ -60,7 +60,7 @@ const SegmentPopup = () => {
               To save your segment,you need to add the schemas to buid the
               quries
             </h4>
-            <SchemasForm />
+            <SchemasForm segmentName={segmentName} />
           </div>
         </div>
       </div>
