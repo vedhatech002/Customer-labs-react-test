@@ -42,7 +42,12 @@ const SchemasForm = ({ segmentName }) => {
     const formData = new FormData(formRef.current);
 
     const data = Object.fromEntries(formData);
-    const schema = Object.keys(data);
+
+    console.log(data);
+    const schema = Object.entries(data).map(([key, value]) => ({
+      [key]: value,
+    }));
+
     const segment_Name = segmentName.trim().replaceAll(" ", "_");
 
     if (segmentName) {
@@ -53,6 +58,7 @@ const SchemasForm = ({ segmentName }) => {
         };
         sendDataTOServer(segmentdata);
         console.log(segmentdata);
+        alert(segment_Name + "segment was saved Successfully 🎉");
         setIsPopupOpen(false);
       } else alert("please add Schema to Save the segmet");
     } else {
@@ -68,16 +74,13 @@ const SchemasForm = ({ segmentName }) => {
         {
           method: "POST",
           body: JSON.stringify(segment),
-          headers: {
-            "sec-fetch-mode": "cors",
-            "Content-Type": "application/json",
-          },
         }
       );
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <form className="mt-6 w-full" ref={formRef} onSubmit={handleForm}>
       {schemaItems.length > 0 ? (
